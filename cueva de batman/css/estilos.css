@@ -1,0 +1,286 @@
+/*---------- ESTILOS GENERALES ----------*/
+* {
+  box-sizing: border-box; /* hace crecer el padding o border hacia el interior de la caja */
+}
+
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-family: 'SF Pro Display', sans-serif;
+  color: #202020;
+  line-height: 1.4; /* este line-height se hereda en todas la etiquetas (mejor no indicar unidad para que sea un factor multiplicador) */
+}
+
+ul,
+li,
+figure,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+
+section header {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+iframe {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.grey-section {
+  background: #e6e6e6;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+
+.btn-carta {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #000;
+  border-radius: 8px;
+  color: #c6c610;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+/*---------- ESTRUCTURA ----------*/
+
+.ancho-maximo {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4em 2em;
+}
+
+.contenedor-inline > * {
+  display: inline-block;
+}
+
+/*---------- HEADER PRINCIPAL----------*/
+
+.main-header {
+  padding: 6em 1em;
+  background: url("../img/batman_background.jpg") center/cover, #000;
+  /* el color #000 se inserta para tener un plan B en caso de que no cargue a foto */
+  color: #e6e6e6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-header__logo {
+  margin-top: 1em;
+}
+
+.main-header__title {
+  font-size: clamp(2rem, 6dvw, 7rem);
+  letter-spacing: 0.2em;
+  line-height: 1.1em;
+  font-weight: 600;
+}
+
+.main-header__slogan {
+  margin: 0;
+  font-size: clamp(1rem, 2dvw, 3rem);
+  letter-spacing: 0.1em;
+}
+
+
+/* navegación principal */
+.main-header nav {
+  margin-top: 3em;
+}
+
+.main-header nav li:not(:last-child) {
+  margin-right: 1em;
+}
+ 
+.main-header nav a {
+  padding: 0.5em 1em;
+  display: inline-block;
+  background: #FFF;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #212121;
+  font-weight: bold;
+}
+
+.main-header nav a:hover {
+  background: #c6c610;
+}
+
+
+/*---------- SECCIÓN RESTAURANTE ----------*/
+
+.restaurante p+h3 {
+  margin-top: 2em;
+}
+
+.foto-restaurante {
+  margin: 36px 0 72px;
+  background: #000;
+}
+
+.foto-restaurante figcaption {
+  padding: 0.8em 1em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #c6c610;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+/*---------- SECCIÓN CATWOMAN ----------*/
+
+.catwoman {
+  padding: 4em 1em;
+  text-align: center;
+  background:  url("../img/catwoman_background.jpg") no-repeat right top / cover, #000 ; /* el color #000 se inserta para tener un plan B en caso de que no cargue a foto */
+  color: #e6e6e6;
+}
+
+.catwoman p {
+  margin: 0;
+  font-size: clamp(1.1rem, 4dvw, 2rem);
+
+}
+
+.catwoman .destacado {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 8dvw, 7rem);
+}
+
+/*---------- SECCIÓN TARIFAS ----------*/
+
+.tarifas {
+  padding: 3em;
+  background: #c6c610;
+}
+
+.tarifas>header {
+  text-align: center;
+}
+
+.tarifas ul {
+  margin-left: 2em;
+  font-size: 1.5rem;
+}
+
+
+.tarifas__basica,
+.tarifas__total {
+  width: clamp(300px, 70%, 700px);
+  margin: 2em auto;
+  padding: 2em 3em;
+  border-radius: 18px;
+}
+ 
+.tarifas__total {
+  background: #2d2d2d;
+  color: #fff;
+}
+
+.tarifas__precio {
+  font-weight: bold;
+}
+
+
+/*---------- SECCIÓN CONTACTO ----------*/
+
+.contacto__address {
+  font-style: normal;
+  margin-top: 3.2em;
+}
+
+.contacto__address li {
+  list-style-type: none;
+  margin-bottom: 0.8em;
+  font-size: 1.2rem;
+
+}
+
+.contacto__address a {
+  color: #212121;
+}
+
+.contacto__address a:hover {
+  color: #5062c6;
+}
+
+.contacto__address a:hover .icon {
+  fill: #5062c6;
+}
+
+.contacto__address .icon {
+  margin-right: 4px;
+  width: 1em;
+  height: 1em;
+  fill: #212121;
+  vertical-align: top;
+}
+
+.contacto__address .icon.mail {
+  position: relative;
+  top: 2px;
+}
+
+/*---------- SECCIÓN FOOTER PRINCIPAL ----------*/
+.main-footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background: #2d2d2d;
+  color: #c6c6c6;
+  text-align: center;
+
+}
+
+.main-footer__redes li:not(:last-child) {
+  margin-right: 1em;
+}
+
+.main-footer__redes .icon {
+  width: 36px;
+  height: 36px;
+  fill: #c6c6c6;
+}
+
+.main-footer__redes a:hover .icon {
+  fill: #c6c610;
+}
